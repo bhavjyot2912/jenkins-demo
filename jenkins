@@ -15,7 +15,7 @@ pipeline {
      stage('Test Code') {
             steps {
                 sh "chmod u+x demo.py"
-                sh "./demo.py"
+                sh "python3 demo.py"
             }
         }
     }
