@@ -1,0 +1,22 @@
+pipeline { 
+    agent any
+    stages {
+        stage('Clone Git') {
+            steps {
+                git 'https://github.com/bhavjyot2912/jenkins-demo'
+            }
+        }
+        stage('Build Code') {
+            steps {
+                sh "chmod u+x mul.py"
+                sh "python3 mul.py"
+            }
+        }
+     stage('Test Code') {
+            steps {
+                sh "chmod u+x demo.py"
+                sh "python3 demo.py"
+            }
+}
+}
+}
