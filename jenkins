@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Git') {
             steps {
-                git 'https://github.com/bhavjyot2912/jenkins-demo'
+                git 'https://github.com/bhavjyot2912/jenkins-demo.git'
             }
         }
         stage('Build Code') {
@@ -17,6 +17,6 @@ pipeline {
                 sh "chmod u+x demo.py"
                 sh "python3 demo.py"
             }
-}
-}
+        }
+    }
 }
